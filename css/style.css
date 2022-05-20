@@ -247,16 +247,17 @@ body{
     font-size: 16px;
     font-family: TT Lakes-Medium, sans-serif;
 }
-@media (min-width: 1120px) {
-    .scroll-menu__item{
-        border: 2px solid transparent;
-    }
-}
-.scroll-menu__item:hover{
+
+.scroll-menu__item:first-child{
     background: #FFFFFF;
     border: 2px solid #B8FFEC;
     border-radius: 6px;
-
+}
+@media (min-width: 1120px) {
+    .scroll-menu__item:first-child,
+    .scroll-menu__item{
+        border: 2px solid transparent;
+    }
 }
 @media (min-width: 1120px) {
     .scroll-menu__item{
@@ -264,6 +265,15 @@ body{
     }
     .scroll-menu__item:nth-last-child(2){
         padding: 8px 8px 8px 4px;
+    }
+    .scroll-menu__item:first-child{
+        background-color: transparent;
+    }
+    .scroll-menu__item:hover{
+        background: #FFFFFF;
+        border: 2px solid #B8FFEC;
+        border-radius: 6px;
+
     }
 }
 .scroll-menu__link{
