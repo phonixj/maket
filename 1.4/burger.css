@@ -1,0 +1,158 @@
+@font-face {
+    font-family: TT Lakes;
+    src: url(../fonts/TTLakes-Regular.ttf);
+}
+@font-face {
+    font-family: TT Lakes-Bold;
+    src: url(../fonts/TTLakes-Bold.ttf);
+}
+@font-face {
+    font-family: TT Lakes-Medium;
+    src: url(../fonts/TTLakes-Medium.ttf);
+}
+
+body{
+    margin: 0;
+}
+.container{
+    max-width: 320px;
+    height: 1024px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.header{
+
+}
+
+.header__menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header__menu--position{
+    padding-top: 12px;
+}
+
+.button{
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.burger-logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-basis: 55%;
+    column-gap: 16px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 100%;
+    margin-left: 24px;
+}
+.list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-family: "TT Lakes-Medium", "sans-serif" ;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+
+}
+.main__list{
+    margin-top: 44px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
+.list__link{
+    text-decoration: none;
+    color: #1B1C21;
+    transition: color .5s ease;
+
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+}
+.footer__list{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+.ru,
+.en,
+.ch{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+}
+.lang{
+    font-family: "TT Lakes-Medium", "sans-serif" ;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+}
+.ru:checked + .lang,
+.en:checked + .lang,
+.ch:checked + .lang{
+    color:#7E7E82;
+}
+.email{
+    font-family: "TT Lakes-Medium", "sans-serif";
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    text-decoration: none;
+}
+.number{
+    font-family: "TT Lakes-Bold", "sans-serif";
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+    text-decoration: none;
+}
+.language{
+    margin-bottom: 24px;
+    margin-top: 24px;
+}
+.list__link::before{
+    content: "";
+    width: 8px;
+    height: 32px;
+    background-color: #41F6D7;
+    position: absolute;
+    border-radius: 8px;
+    left: -4px;
+    transform: scale(0);
+    transition: transform .2s ease;
+}
+.list__link:hover{
+    color: #7E7E82;
+}
+.list__link:hover::before{
+    content: "";
+    width: 8px;
+    height: 32px;
+    background-color: #41F6D7;
+    position: absolute;
+    border-radius: 8px;
+    left: -4px;
+    transform: scale(1);
+}
