@@ -90,13 +90,13 @@ body{
     margin: 0 16px 0 16px;
 
 }
-.header-button{
+.button{
     border: 0;
     background-color: transparent;
     padding: 0;
     transition: transform 500ms ease;
 }
-.header-button:hover{
+.button:hover{
     transform: scale(1.1);
 }
 .header-lists{
@@ -301,7 +301,6 @@ body{
 @media (min-width: 1120px) {
     .content-info{
         margin-left: 16px;
-
     }
 
 }
@@ -385,3 +384,4 @@ body{
         width: 530px;
     }
 }
+
