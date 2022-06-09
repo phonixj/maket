@@ -37,59 +37,42 @@ body{
         display: none;
     }
 }
-.header-nav{
+.menu{
     display: flex;
     align-items: center;
     flex-basis: 100%;
     background-color: #FFFFFF;
-    
 }
 @media  (min-width: 768px){
-    .header-nav{
+    .menu{
         justify-content: space-between;
     }
 }
-.header-menu{
+.menu__left{
     display: flex;
     align-items: center;
-    flex-basis: 40%;
     position: relative;
 }
 
 @media  (min-width: 768px){
-    .header-menu{
-        flex-basis: 30%;
-    }
-    .logo{
+    .logo__link{
         margin-left: 28px;
     }
 }
-.header-menu::after{
+.menu__left::after{
     content: "";
+    position: absolute;
     width: 2px;
     height: 32px;
     background-color: #EAEAEA;
-    margin-left: 16px;
+    right: -12px;
 }
 @media (min-width: 768px) {
-    .header-menu::after{
-        display: none;
-    }
-    .header-menu__button-pos::after{
-        content: "";
-        width: 2px;
-        background-color: #EAEAEA;
-        height: 32px;
-        position: absolute;
-        margin-left: 20px;
-        top: 5px;
+    .menu__left::after{
+        right: 118px;
     }
 }
-.header-menu__button-pos{
-    position: relative;
-    margin: 0 16px 0 16px;
 
-}
 .button{
     border: 0;
     background-color: transparent;
@@ -99,17 +82,11 @@ body{
 .button:hover{
     transform: scale(1.1);
 }
-.header-lists{
-    display: flex;
-    list-style-type: none;
-    flex-basis: 60%;
+.menu__button{
+    position: relative;
+    padding: 0 16px 0 16px;
+}
 
-}
-@media  (min-width: 768px){
-    .header-lists{
-        flex-basis: 30%;
-    }
-}
 .table-list{
     display: none;
 }
@@ -119,6 +96,7 @@ body{
         list-style-type: none;
         align-items: center;
         flex-basis: 100%;
+        justify-content: flex-end;
     }
     .table-list__item:nth-child(2){
         margin-right: 16px;
@@ -141,7 +119,11 @@ body{
     justify-content: flex-end;
     align-items: center;
     flex-basis: 100%;
-
+}
+@media  (min-width: 768px) {
+    .mobile-list{
+        flex-basis: 0;
+    }
 }
 .mobile-list__item:nth-child(1){
     margin-right: 16px;
@@ -189,14 +171,14 @@ body{
         align-items: center;
         margin-right: 32px;
     }
-    .desktop-list__item-flex{
+    .desktop-list__item--flex{
         font-family: TT Lakes-Medium, sans-serif;
         display: flex;
         align-items: center;
         font-size: 16px;
 
     }
-    .desktop-list__item-margin{
+    .desktop-list__item--margin{
         margin-left: 8px;
     }
 }
@@ -261,10 +243,7 @@ body{
 }
 @media (min-width: 1120px) {
     .scroll-menu__item{
-        padding: 8px 20px;
-    }
-    .scroll-menu__item:nth-last-child(2){
-        padding: 8px 8px 8px 4px;
+        padding: 8px 18px;
     }
     .scroll-menu__item:first-child{
         background-color: transparent;
@@ -292,42 +271,45 @@ body{
         flex-direction: row;
         justify-content: space-between;
     }
-    .content-info{
+    .content__info{
         flex-basis: 50%;
 
     }
 }
 
 @media (min-width: 1120px) {
-    .content-info{
+    .content__info{
         margin-left: 16px;
     }
 
 }
 .info{
-    margin-left: 16px;
-    margin-right: 16px;
+
 
 }
-.info__text{
+.content__text{
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.2px;
     font-family: "TT Lakes", sans-serif;
+    margin-left: 16px;
+    margin-right: 16px;
 }
-.info__text2{
+.content__text2{
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.2px;
     display: none;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 @media (min-width: 768px) {
-    .info__text2{
+    .content__text2{
         display: block;
     }
 }
 @media (min-width: 1120px) {
-    .info__text2::after{
+    .content__text2::after{
         content: ", что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.";
 
     }
